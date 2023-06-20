@@ -80,4 +80,6 @@ extern bool ISXDIGIT(char);
 
 #define MAX(X,Y) ((X) > (Y) ? (X) : (Y))
 
+#define ATTRIBUTE_UNUSED __attribute__((__unused__))
+
 #endif // !defined(GO_SYSTEM_H)

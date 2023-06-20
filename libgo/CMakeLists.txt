@@ -465,6 +465,7 @@ add_custom_target(runtimeinctarg DEPENDS ${runtimeinc})
 # Base C files from the runtime dir.
 set(runtimecfiles
   "runtime/aeshash.c"
+  "runtime/env_posix.c"
   "runtime/go-assert.c"
   "runtime/go-caller.c"
   "runtime/go-callers.c"
@@ -476,9 +477,10 @@ set(runtimecfiles
   "runtime/go-memclr.c"
   "runtime/go-memequal.c"
   "runtime/go-memmove.c"
+  "runtime/go-mmap.c"
   "runtime/go-nanotime.c"
-  "runtime/go-now.c"
   "runtime/go-nosys.c"
+  "runtime/go-now.c"
   "runtime/go-reflect-call.c"
   "runtime/go-setenv.c"
   "runtime/go-signal.c"
@@ -487,7 +489,6 @@ set(runtimecfiles
   "runtime/go-unsetenv.c"
   "runtime/go-unwind.c"
   "runtime/go-varargs.c"
-  "runtime/env_posix.c"
   "runtime/panic.c"
   "runtime/print.c"
   "runtime/proc.c"
