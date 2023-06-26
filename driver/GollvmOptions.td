@@ -415,6 +415,14 @@ def fgo_embedcfg_EQ : Joined<["-"], "fgo-embedcfg=">,
   Group<f_Group>,
   HelpText<"List of embedded files via go:embed.">;
 
+def fgo_importcfg_EQ : Joined<["-"], "fgo-importcfg=">,
+  Group<f_Group>,
+  HelpText<"Identifies a file that provides mappings for import package"
+           " paths found in the Go source files. The file can contain two"
+           " commands: 'importpath' to rename import paths for vendoring and"
+           " 'packagefile' to map from package path to files containing export"
+           " data. This option is intended for use by the 'go' command">;
+
 // Needed for compatibility with gccgo
 
 def xassembler_with_cpp : Flag<["-"], "xassembler-with-cpp">,

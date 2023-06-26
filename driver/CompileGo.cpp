@@ -588,6 +588,9 @@ bool CompileGoImpl::initBridge()
   opt::Arg *ecfg =
       args_.getLastArg(gollvm::options::OPT_fgo_embedcfg_EQ);
   args.embedcfg = (ecfg == nullptr ? NULL : ecfg->getValue());
+  opt::Arg *icfg =
+      args_.getLastArg(gollvm::options::OPT_fgo_importcfg_EQ);
+  args.importcfg = (icfg == nullptr ? NULL : icfg->getValue());
   args.check_divide_by_zero =
       driver_.reconcileOptionPair(gollvm::options::OPT_fgo_check_divide_zero,
                                   gollvm::options::OPT_fno_go_check_divide_zero,
